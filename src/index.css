@@ -13,6 +13,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -20,14 +40,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -65,4 +77,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.header-sticky {
+  background: #800020;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  
+}
+
+.footer-sticky {
+  background: #800020;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  
 }

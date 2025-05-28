@@ -1,13 +1,13 @@
 
 
 import React, {useState, useContext} from "react";
-
+import { useNavigate } from "react-router-dom";
 import { useContextoUsuario } from "../contextos/contexto_usuario.jsx";
 
 export function CrearUsuario() {
     
     const {agregarUsuario} = useContextoUsuario();
-    
+    const navigate = useNavigate();
     const [correo, setCorreo] = useState("");
     const [nombre, setNombre] = useState("");
     const [contrasena, setContrasena] = useState("");
@@ -39,6 +39,7 @@ export function CrearUsuario() {
         setContrasena("");
         setConfirmarContrasena("");
         alert("Usuario creado");
+        navigate("/usuarios");
 
 
     }

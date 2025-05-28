@@ -3,18 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { ContextoUsuarioProvider } from './contextos/contexto_usuario.jsx'
-import { CrearUsuario } from './componentes/usuario.jsx'
-import { TablaUsuario } from './componentes/tabla_usuario.jsx'
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from './rutas/rutas.jsx'
+import { Header } from "./componentes/Header.jsx";
+import { Footer } from "./componentes/Footer.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     
     <ContextoUsuarioProvider>
 
-      <CrearUsuario/>
-      <TablaUsuario/>
+      <BrowserRouter>
+          <Header />
+        
+          <AppRoutes />
+        
+          <Footer />
+      </BrowserRouter>
 
     </ContextoUsuarioProvider>
 
